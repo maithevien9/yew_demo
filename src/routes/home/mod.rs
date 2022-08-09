@@ -10,8 +10,9 @@ use welcome::Welcome;
 pub fn home() -> Html {
     html! {
         <div>
-            <Service/>
             <Welcome/>
+            <Service/>
+
         </div>
     }
 }
