@@ -40,6 +40,7 @@ serde_json = "1.0.82"
 wasm-bindgen-futures = "0.4.31"
 web-sys = { version = "0.3.58", features = ["Event"] }
 web3 = { version = "0.18.0", default-features = false, features = ["wasm", "eip-1193"] }
+dotenv_codegen = "0.15.0"
 
 [dev-dependencies]
 wasm-bindgen-test = "0.3.14"

@@ -1,4 +1,5 @@
 // use ethers::prelude::*;
+use dotenv_codegen::dotenv;
 use gloo::console;
 use web3::transports::eip_1193::{Eip1193, Provider};
 
@@ -8,6 +9,8 @@ use web3::{
     transports::eip_1193::{self},
     types::H160,
 };
+
+const ADDRESS_WALLET: &str = dotenv!("ADDRESS_WALLET");
 
 #[derive(Default)]
 pub struct WalletAddress(Option<H160>);
@@ -40,6 +43,7 @@ pub fn nav() -> Html {
             if let Ok(addr) = accounts {
                 if !addr.is_empty() {
                     console::log!(format!("{:#x}", addr[0]).to_string());
+                    console::log!(ADDRESS_WALLET)
                 }
             }
         })
